@@ -67,14 +67,14 @@ class HelloViewSet(viewsets.ViewSet):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        def retrieve(self, request, pk=None):
-            return Response({'http_method': 'GET'})
+    def retrieve(self, request, pk=None):
+        return Response({'http_method': 'GET'})
 
-        def update(self, request, pk=None):
-            return Response({'http_method': 'PUT'})
+    def update(self, request, pk=None):
+        return Response({'http_method': 'PUT'})
 
-        def partial_update(self, request, pk=None):
-            return Response({'http_method': 'PATCH'})
+    def partial_update(self, request, pk=None):
+        return Response({'http_method': 'PATCH'})
 
-        def destroy(self, request, pk=None):
-            return Response({'http_method': 'DELETE'})
+    def destroy(self, request, pk=None):
+        return Response({'http_method': 'DELETE'})
